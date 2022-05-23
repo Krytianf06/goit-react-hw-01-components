@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './socialProfile.module.css';
 
-const Profile = ({ name, tag, location, avatar, stats }) => (
+const Profile = ({ username, tag, location, avatar, stats }) => (
   <div className={styles.profile}>
     <div className={styles.description}>
       <img src={avatar} alt="User avatar" className={styles.avatar} />
-      <p className={styles.name}>{name}</p>
+      <p className={styles.username}>{username}</p>
       <p className={styles.tag}>{tag}</p>
       <p className={styles.location}>{location}</p>
     </div>
@@ -30,7 +30,7 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
 
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
     stats: PropTypes.shape({
